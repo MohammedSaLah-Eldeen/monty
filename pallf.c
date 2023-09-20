@@ -11,12 +11,11 @@
 void pallf(stack_t **stack, unsigned int line_number)
 {
   stack_t *tmp;
+  int layers = count_layers(stack);
   line_number = line_number;
-  /*int layers = count_layers(stack);
 
-
-    if (layers == 0)
-      return; */
+  if (layers == 0)
+    return; 
 
   tmp = *stack;
   while (tmp)
