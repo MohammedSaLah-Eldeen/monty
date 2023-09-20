@@ -2,7 +2,7 @@
 
 /**
 * pushf - adds a layer to stack.
-* 
+*
 * @stack: double pointer to the top of the stack.
 * @line_number: the line number.
 *

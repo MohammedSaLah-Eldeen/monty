@@ -2,7 +2,7 @@
 
 /**
 * pallf - prints all of the element in a stack.
-* 
+*
 * @stack: double pointer to the top of the stack.
 * @line_number: the line number.
 *
@@ -15,7 +15,7 @@ int layers = count_layers(stack);
 line_number = line_number;
 
 if (layers == 0)
-return; 
+return;
 
 tmp = *stack;
 while (tmp)

@@ -2,10 +2,10 @@
 
 /**
 * main - interpreter main function
-* 
+*
 * @ac: number of the command line arguments
 * @av: double pointer to the command line arguments
-* 
+*
 * Return: 0 on success or exits with error message
 */
 int main(int ac, char **av)
@@ -30,7 +30,7 @@ exit(EXIT_FAILURE);
 
 while (fgets(buffer, 256, mbytefile) != NULL)
 {
-execute(&line_number, buffer);     
+execute(&line_number, buffer);
 }
 
 free_stack(stack);
