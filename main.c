@@ -11,7 +11,7 @@
 int main(int ac, char **av)
 {
 FILE *mbytefile;
-char buffer[256];
+char buffer[1024];
 unsigned int line_number = 0;
 
 if (ac != 2)
@@ -28,7 +28,7 @@ exit(EXIT_FAILURE);
 }
 
 
-while (fgets(buffer, 256, mbytefile) != NULL)
+while (fgets(buffer, 1024, mbytefile) != NULL)
 {
 execute(&line_number, buffer);
 }
