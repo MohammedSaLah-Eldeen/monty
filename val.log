@@ -1,23 +1,53 @@
-==27378== Memcheck, a memory error detector
-==27378== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==27378== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==27378== Command: ./monty bytecodes/00.m
-==27378== Parent PID: 23435
-==27378== 
-==27378== Invalid free() / delete / delete[] / realloc()
-==27378==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==27378==    by 0x109C17: tokenizef (tokenizef.c:34)
-==27378==    by 0x1094A8: execute (execute.c:30)
-==27378==    by 0x109732: main (main.c:33)
-==27378==  Address 0x1ffeffff10 is on thread 1's stack
-==27378==  in frame #3, created by main (main.c:12)
-==27378== 
-==27378== 
-==27378== HEAP SUMMARY:
-==27378==     in use at exit: 0 bytes in 0 blocks
-==27378==   total heap usage: 21 allocs, 25 frees, 5,804 bytes allocated
-==27378== 
-==27378== All heap blocks were freed -- no leaks are possible
-==27378== 
-==27378== For lists of detected and suppressed errors, rerun with: -s
-==27378== ERROR SUMMARY: 4 errors from 1 contexts (suppressed: 0 from 0)
+==10344== Memcheck, a memory error detector
+==10344== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==10344== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==10344== Command: ./monty bytecodes/mo_test0.m
+==10344== Parent PID: 3700
+==10344== 
+==10344== Invalid free() / delete / delete[] / realloc()
+==10344==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10344==    by 0x109C17: tokenizef (tokenizef.c:34)
+==10344==    by 0x1094A8: execute (execute.c:30)
+==10344==    by 0x109732: main (main.c:33)
+==10344==  Address 0x1ffeffff10 is on thread 1's stack
+==10344==  in frame #3, created by main (main.c:12)
+==10344== 
+==10344== 
+==10344== HEAP SUMMARY:
+==10344==     in use at exit: 541 bytes in 5 blocks
+==10344==   total heap usage: 19 allocs, 18 frees, 5,768 bytes allocated
+==10344== 
+==10344== 5 bytes in 1 blocks are still reachable in loss record 1 of 4
+==10344==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10344==    by 0x109386: _strdup (_strdup.c:21)
+==10344==    by 0x109BCA: tokenizef (tokenizef.c:29)
+==10344==    by 0x1094A8: execute (execute.c:30)
+==10344==    by 0x109732: main (main.c:33)
+==10344== 
+==10344== 16 bytes in 1 blocks are still reachable in loss record 2 of 4
+==10344==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10344==    by 0x109B85: tokenizef (tokenizef.c:25)
+==10344==    by 0x1094A8: execute (execute.c:30)
+==10344==    by 0x109732: main (main.c:33)
+==10344== 
+==10344== 48 bytes in 2 blocks are still reachable in loss record 3 of 4
+==10344==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10344==    by 0x1098D5: pushf (pushf.c:32)
+==10344==    by 0x10950A: execute (execute.c:36)
+==10344==    by 0x109732: main (main.c:33)
+==10344== 
+==10344== 472 bytes in 1 blocks are still reachable in loss record 4 of 4
+==10344==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10344==    by 0x48D592D: __fopen_internal (iofopen.c:65)
+==10344==    by 0x48D592D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+==10344==    by 0x1096D5: main (main.c:23)
+==10344== 
+==10344== LEAK SUMMARY:
+==10344==    definitely lost: 0 bytes in 0 blocks
+==10344==    indirectly lost: 0 bytes in 0 blocks
+==10344==      possibly lost: 0 bytes in 0 blocks
+==10344==    still reachable: 541 bytes in 5 blocks
+==10344==         suppressed: 0 bytes in 0 blocks
+==10344== 
+==10344== For lists of detected and suppressed errors, rerun with: -s
+==10344== ERROR SUMMARY: 4 errors from 1 contexts (suppressed: 0 from 0)

@@ -16,14 +16,14 @@ int number;
 
 if (item == NULL)
 {
-fprintf(stderr, "L%u: usage: push integer", line_number);
+fprintf(stderr, "L%u: usage: push integer\n", line_number);
 exit(EXIT_FAILURE);
 }
 while (item[i] != '\0')
 {
 if (!isdigit(item[i]))
 {
-fprintf(stderr, "L%u: usage: push integer", line_number);
+fprintf(stderr, "L%u: usage: push integer\n", line_number);
 exit(EXIT_FAILURE);
 }
 i++;
