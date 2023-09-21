@@ -22,6 +22,8 @@ instruction_t instructions[] = {
 {"pint", pintf},
 {"pop", popf},
 {"swap", swapf},
+{"add", addf},
+{"nop", nopf},
 {NULL, NULL},
 };
 
