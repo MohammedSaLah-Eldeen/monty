@@ -31,7 +31,6 @@ tokenb = strtok(NULL, " ");
 }
 
 command[i] = NULL;
-free(*line);
 free(linecp);
 
 return (command);
