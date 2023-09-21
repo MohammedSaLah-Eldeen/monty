@@ -11,7 +11,7 @@
 void pushf(stack_t **stack, unsigned int line_number)
 {
 stack_t *new;
-int i = 0;
+int i;
 int number;
 
 if (item == NULL)
@@ -19,6 +19,10 @@ if (item == NULL)
 fprintf(stderr, "L%u: usage: push integer\n", line_number);
 exit(EXIT_FAILURE);
 }
+if (item[0] == '-')
+i = 1;
+else
+i = 0;
 while (item[i] != '\0')
 {
 if (!isdigit(item[i]))
