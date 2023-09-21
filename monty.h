@@ -46,6 +46,7 @@ int count_layers(stack_t **stack);
 void pushf(stack_t **stack, unsigned int line_number);
 void pallf(stack_t **stack, unsigned int line_number);
 void pintf(stack_t **stack, unsigned int line_number);
+void popf(stack_t **stack, unsigned int line_number);
 void stripf(char *line);
 char **tokenizef(char **line);
 void execute(unsigned int *line_number, char *line);

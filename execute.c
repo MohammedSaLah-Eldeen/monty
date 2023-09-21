@@ -20,6 +20,7 @@ instruction_t instructions[] = {
 {"push", pushf},
 {"pall", pallf},
 {"pint", pintf},
+{"pop", popf},
 {NULL, NULL},
 };
 
