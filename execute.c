@@ -19,6 +19,7 @@ char **command = NULL;
 instruction_t instructions[] = {
 {"push", pushf},
 {"pall", pallf},
+{"pint", pintf},
 {NULL, NULL},
 };
 

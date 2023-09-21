@@ -1,5 +1,6 @@
-push 4
-push 3
-push -12
+             push            4
+  push      3               
+push               -12
 pall
-push  
+push                            123
+	     pall
